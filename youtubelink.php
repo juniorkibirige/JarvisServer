@@ -1,6 +1,7 @@
 <?php
 /*
 Made by [egy.js](https://www.instagram.com/egy.js/);
+Updated by [Kibirige Junior Lawrence](aanga26@gmil.com, +256705568794)
 */
 header('Access-Control-Allow-Origin: *');  
 header('Content-Type: application/json');
@@ -21,6 +22,7 @@ if(isset($_GET['url']) && $_GET['url'] != ""){
             $t[$n]=$v;
         }
             $x=explode("&",$dt);
+        $h=[];
             foreach($x as $r){
                 $c=explode("=",$r);
                 $n=$c[0]; $v=$c[1];
@@ -42,6 +44,7 @@ if(isset($_GET['url']) && $_GET['url'] != ""){
             $y=urldecode($v);
             $t[$n]=$v;
         }
+        $h=[];
         $streams = explode(',',urldecode($t['url_encoded_fmt_stream_map']));
         foreach($streams as $dt){ 
             $x=explode("&",$dt);
